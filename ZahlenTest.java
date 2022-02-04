@@ -1,5 +1,3 @@
-
-
 import static org.junit.jupiter.api.Assertions.*;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
@@ -39,18 +37,23 @@ public class ZahlenTest
     }
 
     @Test
-    public void testeAlles()
+    public void testeKarimsMethode()
     {
         assertEquals(5050, zahlenAddieren.Zahlen());
     }
 
     @Test
-    public void parameterTest()
+    public void testeMethodeMitParameter()
     {
          int grenze = 10;
+         long [] erwarteteErgebnisse=new long[]{55,5050,500500,50005000,5000050000l};
         for (int i=0;i<5;i++){
-            System.out.println("Summe der Zahlen bis "+grenze+": "+zahlenAddieren.zahlen2(grenze) );
+            int ergebnis = zahlenAddieren.zahlen2(grenze);
+            System.out.println("Summe der Zahlen bis "+grenze+": "+ ergebnis);
             grenze = grenze*10;
+            assertEquals(erwarteteErgebnisse[i],ergebnis);
+            //sollte einen Fehler zeigen, weil fuer grosse Summen der int-Bereich verlassen wird
+            //TODO: Umschreiben der Methode auf long
         }
     }
 }
