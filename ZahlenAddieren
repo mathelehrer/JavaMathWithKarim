@@ -1,0 +1,12 @@
+public class ZahlenAddieren
+{
+    public int Zahlen(){
+        int summe =0;
+        for (int i=1;i<=100;i++){
+            summe=summe+i;
+            System.out.println("summe: "+ summe);
+        }
+        return summe;
+    }
+    
+}
