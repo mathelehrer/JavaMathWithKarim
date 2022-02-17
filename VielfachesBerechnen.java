@@ -2,9 +2,9 @@ public class VielfachesBerechnen
 {
     public void VielfacheBerechnen()
     {   
-        for (int i=0;i<=1000;i++)
+        for (int i=0;i<=1000;i=i+5)
         {
-            int vielfaches = 5*i;
+            int vielfaches = i;
             System.out.println(vielfaches);
         }
     }
